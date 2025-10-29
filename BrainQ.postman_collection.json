@@ -1,0 +1,707 @@
+{
+	"info": {
+		"_postman_id": "4e99d7c7-6dba-4cb5-b040-27d45850cbcc",
+		"name": "BrainQ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24986730",
+		"_collection_link": "https://raise-invoice.postman.co/workspace/RAISE-INVOICE-Workspace~28f9b0b3-d767-4ca4-8211-ed2554d5f6af/collection/24986730-4e99d7c7-6dba-4cb5-b040-27d45850cbcc?action=share&source=collection_link&creator=24986730"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mobile_number\":\"8240874446\",\r\n    // \"mobile_number\":\"9191254321\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Notification",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjZhMzMxZjAwZDljODJhMDg5ZWE3Zjg3ZjMzOTZhNTlkZWZiY2FkY2EzMDA3ODUwYjliMjc4ZGVjNTJhYjY5Y2IwYWJiYmQxMGJiNjkwMTEiLCJpYXQiOjE3MjI0MzQ4NTcuNDgzMTMyLCJuYmYiOjE3MjI0MzQ4NTcuNDgzMTM3LCJleHAiOjE3MzgzMzI0NTcuNDcxMjQzLCJzdWIiOiI5NCIsInNjb3BlcyI6W119.PcsuvOhBTI9Mf7fz2kCdu_RM2WZgqIxAJF9Jh8PLvlB63JmnZe2UumWEFCWzUDdDPvxUrokToPQn7Tch45Nrg784yukpozRfDvzF-UmNVr8vr8hZU6YM5XEvzgyiyZUrfjkj3jJrGEcrtMxSRoDPtTwkWSWlDQmsdXaZrXySa84Epl1GW4HQLcV7HQJ4694dsdjW1cV6TBV_YM3T2dhORfwg5Fb4vbdYSrSsiltdXdj1rR4WPmtftuEtjs9QzOdrU9543CanIxWMGLs-mdtgWO8DSaSZKa3GY0_937t_2eVvjkAIV6X-G8GxQZUUo9ktJCy1zuJexZpPJbflP6GuZARGyBNd9oEYFzxB95R14VUyR0pdoUqjE9nzRmtwU7onQrJ1BDviWZXKfrWo7_c3ujj_XUjWfIQ3siVXjGV2eu9TPCS5qi6zjmY5-AUtWdVykWrj7SYE2kpdbPwoaWSTywHd1CqU4dWb_kJ9zPV9MXc5n3Aux4Z051kF90M_J1H1nuOpgN7Z9NHYYw9u-zDH_urDBx0EJPhsVah33KKl9MncwfZIxuGD7s1xld1mxwYe3IIDr_DEVAcuf9xsq5MEELwSUMkuzSTZNaPNtIUSilznNX7HRlRHAsfOzHP-mXEBpQsK2H99i4E5XFPU1CkB01rMV4Zqw_a_DdiryJDSEXU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/student/notifications",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"student",
+						"notifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store Exam Score",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjljNDE5ODExYTBiMWQ0ZTQ1MzUyMmRjYWMwZDNmMjU2NzY0NWRhYTliNDU2ZWIyMWIyMTBhZTBiZTcwMjM4MjA2Mjg3OTM2NGRiYzA0YTkiLCJpYXQiOjE3MjI1MDQ4MDAuMDQ1NDk3LCJuYmYiOjE3MjI1MDQ4MDAuMDQ1NTAxLCJleHAiOjE3Mzg0MDI0MDAuMDIyOTE4LCJzdWIiOiI5NCIsInNjb3BlcyI6W119.dwCHj-d9UQBgfjnOos8JCAkAG8GtFekDDHSiFSgTblryFb6oVr3XVkvLcoyJ1_os3iwC3a_7iewm2GqllRUOLfetPoYCXfNigsTeseWQCGSvu6IIf8wzS6df8BoM42UFfuBLSD_YWnwkW7mffeLWJi4g58ipsTuMSb3ftie7t2l01IX8oaZ9vpuxr-DTCGjJ1GdPMHJ2KyY5xJNXyTuShkakZQX9aBTZ6qjfNHwNcZo4iP2l2d-3GIAE0Ev_aNg5eCDUUVarVJBPIeY99OB6vOuHOJ9T1CKj-yoGu3U14zNC7tsDLR4QRedX4sazR2BqQ0HRTbSxwHcR1X-CUpGPe4pebTfqhnO-juOwbtk-HVQ66fjktpuCg8SYZ4o0e8UbQmmq1XAG84iRe2Pgd3q45I15m1hkAvFFUB6KA-HlFnhe2xuGBQrNVtqNv3hn_f1gH8k0Lmtoh7LXjGlFl3odvfSA6agmKUhxJ4KxgjXwVLoGDvbI153mcozYKpa48J7E41orVcgyvaL-O8KjnvEn1jMtD8Tu6NOl3gz9LU16YtTYJ2a_qsMbe58IYwpy9_J_5UhM-84fmgGkDTefuqBaz5HvLMMRe8qmRLMC6GP4xvqQOEKVTjPv1CY2KUG0KiUXdW7w47LTmnC9K7Hq3guQsMTLSK7F3dxHQapYshu3gu0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"exam_id\": \"d11cc30b-4d42-483e-854e-376188591e5c\",\r\n    \"user_ans\": [\r\n        {\r\n            \"question_id\": \"d11cc30b-4d42-483e-854e-376188591e5c\",\r\n            \"answer_id\": \"d11cc30b-4d42-483e-854e-376188591e5c\"\r\n        },\r\n        {\r\n            \"question_id\": \"d11cc30b-4d42-483e-854e-376188591e5c\",\r\n            \"answer_id\": \"d11cc30b-4d42-483e-854e-376188591e5c\"\r\n        },\r\n        {\r\n            \"question_id\": \"d11cc30b-4d42-483e-854e-376188591e5c\",\r\n            \"answer_id\": \"d11cc30b-4d42-483e-854e-376188591e5c\"\r\n        }\r\n    ],\r\n    \"score\": 75,\r\n    \"total_score\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/student/exam-score",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"student",
+						"exam-score"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Exam History",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjljNDE5ODExYTBiMWQ0ZTQ1MzUyMmRjYWMwZDNmMjU2NzY0NWRhYTliNDU2ZWIyMWIyMTBhZTBiZTcwMjM4MjA2Mjg3OTM2NGRiYzA0YTkiLCJpYXQiOjE3MjI1MDQ4MDAuMDQ1NDk3LCJuYmYiOjE3MjI1MDQ4MDAuMDQ1NTAxLCJleHAiOjE3Mzg0MDI0MDAuMDIyOTE4LCJzdWIiOiI5NCIsInNjb3BlcyI6W119.dwCHj-d9UQBgfjnOos8JCAkAG8GtFekDDHSiFSgTblryFb6oVr3XVkvLcoyJ1_os3iwC3a_7iewm2GqllRUOLfetPoYCXfNigsTeseWQCGSvu6IIf8wzS6df8BoM42UFfuBLSD_YWnwkW7mffeLWJi4g58ipsTuMSb3ftie7t2l01IX8oaZ9vpuxr-DTCGjJ1GdPMHJ2KyY5xJNXyTuShkakZQX9aBTZ6qjfNHwNcZo4iP2l2d-3GIAE0Ev_aNg5eCDUUVarVJBPIeY99OB6vOuHOJ9T1CKj-yoGu3U14zNC7tsDLR4QRedX4sazR2BqQ0HRTbSxwHcR1X-CUpGPe4pebTfqhnO-juOwbtk-HVQ66fjktpuCg8SYZ4o0e8UbQmmq1XAG84iRe2Pgd3q45I15m1hkAvFFUB6KA-HlFnhe2xuGBQrNVtqNv3hn_f1gH8k0Lmtoh7LXjGlFl3odvfSA6agmKUhxJ4KxgjXwVLoGDvbI153mcozYKpa48J7E41orVcgyvaL-O8KjnvEn1jMtD8Tu6NOl3gz9LU16YtTYJ2a_qsMbe58IYwpy9_J_5UhM-84fmgGkDTefuqBaz5HvLMMRe8qmRLMC6GP4xvqQOEKVTjPv1CY2KUG0KiUXdW7w47LTmnC9K7Hq3guQsMTLSK7F3dxHQapYshu3gu0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"exam_id\": \"ba88cb65-50f8-424c-a5ae-9ef85e6360a3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/student/get-exam-history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"student",
+						"get-exam-history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://3.108.121.124/brainq/public/api/student/get-exam-history",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYzVkMjEzODQ5MzhmNmY0OWE2ZDZkYzA2ZDFkZTMxOWMyOGVjOTE5NWRmODFjZDM1MmIwNTRiZGI0YTU1YmM4YjNlMGRkMDQ1OWRjNTE0NGQiLCJpYXQiOjE3MTU4NjU2MDQuNjUyODA4LCJuYmYiOjE3MTU4NjU2MDQuNjUyODEyLCJleHAiOjE3MzE3NjMyMDQuNjQ0NzI2LCJzdWIiOiIxOSIsInNjb3BlcyI6W119.DLrXcQqcC9zvMA3qTt6q33wyjUbkznnKTtgVhYIsUi3AVm_KQRXfT9cEooDcW6kbgfxCoHnlIJBUyAMkSfUP9UgNSs03piRQSXPAQel1Tzq8hwMB8pCRVGp2Mua6iq0zPnDie-G9Yd0eQakaAasuj64HumdzIVe_JhSdjx8aE0crenfjOWWdAGgYRZ0Sey71i42kx62l43djZ_1kAxVccyvtQGzhN9_GSjhBwJhoSb_0CZyqH8HA-t7Arbqs4IMd2X6PVHUeXc8oygXO-Oq_hR_F0cgNiAzd8SCMnL-UItjTJc3TRUdejjImNCqgCTVGldR-GNUoI-UwWX0qwB4xO9h4wdcD_19PtMUHe5dLmqaR5BuWGyESutwkAejaz6FDUCpdDtu1HRpUQj4Dw4xYc7-ONkQIeftoXGFx4VIGxP5_QPu7Y66CtsHhn3SWxIj8E_lAXLjIgdJAXBXo2x2-gW6YukcRVlyYBDiPiYrOmjJUdUKqRJmO-NMkhMlwOcgft9fi9_M_Nry6TWan8VlKcZR1PAF4Agaan5xgqWbQLmIVEA_pONWX2ygs97i3daPUPfWHzmVqv8KC3je1cP5lb2PIbePOoxWSPjlcr4p2LAtEz4RVQaZ6yu0sJ2Q0hGEK-mTg_O_l12jODBwzlZOW-naPx0tsPBrBGryVUPuAWTc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"exam_id\":\"593168d4-06b9-4fb6-a352-ae1a63006738\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://3.108.121.124/brainq/public/api/student/get-exam-history",
+					"protocol": "http",
+					"host": [
+						"3",
+						"108",
+						"121",
+						"124"
+					],
+					"path": [
+						"brainq",
+						"public",
+						"api",
+						"student",
+						"get-exam-history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exam Score",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYzVkMjEzODQ5MzhmNmY0OWE2ZDZkYzA2ZDFkZTMxOWMyOGVjOTE5NWRmODFjZDM1MmIwNTRiZGI0YTU1YmM4YjNlMGRkMDQ1OWRjNTE0NGQiLCJpYXQiOjE3MTU4NjU2MDQuNjUyODA4LCJuYmYiOjE3MTU4NjU2MDQuNjUyODEyLCJleHAiOjE3MzE3NjMyMDQuNjQ0NzI2LCJzdWIiOiIxOSIsInNjb3BlcyI6W119.DLrXcQqcC9zvMA3qTt6q33wyjUbkznnKTtgVhYIsUi3AVm_KQRXfT9cEooDcW6kbgfxCoHnlIJBUyAMkSfUP9UgNSs03piRQSXPAQel1Tzq8hwMB8pCRVGp2Mua6iq0zPnDie-G9Yd0eQakaAasuj64HumdzIVe_JhSdjx8aE0crenfjOWWdAGgYRZ0Sey71i42kx62l43djZ_1kAxVccyvtQGzhN9_GSjhBwJhoSb_0CZyqH8HA-t7Arbqs4IMd2X6PVHUeXc8oygXO-Oq_hR_F0cgNiAzd8SCMnL-UItjTJc3TRUdejjImNCqgCTVGldR-GNUoI-UwWX0qwB4xO9h4wdcD_19PtMUHe5dLmqaR5BuWGyESutwkAejaz6FDUCpdDtu1HRpUQj4Dw4xYc7-ONkQIeftoXGFx4VIGxP5_QPu7Y66CtsHhn3SWxIj8E_lAXLjIgdJAXBXo2x2-gW6YukcRVlyYBDiPiYrOmjJUdUKqRJmO-NMkhMlwOcgft9fi9_M_Nry6TWan8VlKcZR1PAF4Agaan5xgqWbQLmIVEA_pONWX2ygs97i3daPUPfWHzmVqv8KC3je1cP5lb2PIbePOoxWSPjlcr4p2LAtEz4RVQaZ6yu0sJ2Q0hGEK-mTg_O_l12jODBwzlZOW-naPx0tsPBrBGryVUPuAWTc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"exam_id\": \"593168d4-06b9-4fb6-a352-ae1a63006738\",\r\n    \"score\": 1,\r\n    \"total_score\": 5,\r\n    \"user_ans\": [\r\n        {\r\n            \"question_id\": \"c32c2ecb-c713-4538-994c-82792b922fa7\",\r\n            \"answer_id\": \"4593c5fc-77d0-46d3-af56-60987ad7dac4\"\r\n        },\r\n        {\r\n            \"question_id\": \"d9d445d6-cc23-400e-914b-5926235ddd01\",\r\n            \"answer_id\": \"\"\r\n        },\r\n        {\r\n            \"question_id\": \"284ac6ab-ed02-4c5e-b6df-7ea006bd9260\",\r\n            \"answer_id\": \"\"\r\n        },\r\n        {\r\n            \"question_id\": \"4a46dba6-d43a-45a8-8915-01aaa09073ec\",\r\n            \"answer_id\": \"\"\r\n        },\r\n        {\r\n            \"question_id\": \"6d53d555-6469-46ee-a598-a179a6eb92c6\",\r\n            \"answer_id\": \"7438113f-52eb-45ee-91a9-a58a1421d7e9\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://3.108.121.124/brainq/public/api/student/exam-score",
+					"protocol": "http",
+					"host": [
+						"3",
+						"108",
+						"121",
+						"124"
+					],
+					"path": [
+						"brainq",
+						"public",
+						"api",
+						"student",
+						"exam-score"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"step\": \"first\",\r\n    \"first_name\": \"Shubha test\",\r\n    \"mobile_number\": \"8910690514\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://appadmin.brainq.co.in/api/register-in-steps",
+					"protocol": "https",
+					"host": [
+						"appadmin",
+						"brainq",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"register-in-steps"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forget Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    // \"mobile_number\":6290710599,\r\n    // \"mobile_number\":\"8910690514\",\r\n    \"password\":\"secret\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/forget-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"forget-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetExams",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWFiZmQ4ZDRjNzI5Zjc2YTY2YTc2OWM1M2FjZTk4NzNmMWMxNTNmNDZjOTFjNzc5OWI0Nzk3ZjU0NjVhNTY3YmE5MjdmMTExNTQyMjBkYTkiLCJpYXQiOjE3Mzk1Mzc4NDEuMDU1NjU4LCJuYmYiOjE3Mzk1Mzc4NDEuMDU1NjYxLCJleHAiOjE3NTUxNzYyNDEuMDQ4ODY0LCJzdWIiOiIxOSIsInNjb3BlcyI6W119.Lv-GBUvmMExq61fu9FX23spn0834EEswUcefXZ0N3dxxDEwbbmbCM9IxjuX3c5NoNXdgA8v_o8GWQj7UtemK49VFtttMApP2n9Xq6yreHpmeKMGlnG1vP18Lt0l-ruJsUyrnLqHCGXChw3OrQnrAUqelVM0Ct42LkmQ9Hy7xrRMLhmlcJb1voWACkbh27TPEfg8w9YaZrOQ1z8LxG1XHQkvbexlyhuofjdb3-STpSICKHC-OC5I-nNpdIN_7yo5kNTSd9wfd6-R8JV5Ct9K5dc583dziRloGO3Ew05-_QZ5ufISLBdsjHJ53hyeCmnxzuxsIu1_WVVDi1w8VDe22nhhFUqyzgcCUpoDTo8c-F-BPSjwHr8ar6o4bnYGssT4j9dDWJjHiqiNWQaVGTsQDGCNICHnWBiHO2K1L03HYlP2stOopNEpjXrIIKKWPuplQBwurWDl3o5mruj-NXO2at8hQ3gx4f4VvBgsU5VdH4y5HReNkZwN0BDLF8ub03vjV6w8A7xwsYA9Xwci31wVXJhFcm_tVv-C8GHc_MfPjEYk0k_ZA5xdpAnLyhsV5-EXbJfzR1VZihJBegwcAWVmvYdA8Iw8qNBXfP68yZjqsuifwljsJEZEvo0vl58IrtZNyE8LqNimniUKa3WUDp1TvGzXUxWFbg6ILJDtQb9gl2sM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://appadmin.brainq.co.in/api/student/getExams",
+					"protocol": "https",
+					"host": [
+						"appadmin",
+						"brainq",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"student",
+						"getExams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forget Pass New",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mobile_number\":\"8240874446\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://appadmin.brainq.co.in/api/forget-password",
+					"protocol": "https",
+					"host": [
+						"appadmin",
+						"brainq",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"forget-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mobile_number\":\"8240874446\",\r\n    \"is_otp_verified\":1,\r\n    \"password\":\"12345678\",\r\n    \"password_confirmation\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://appadmin.brainq.co.in/api/reset-password",
+					"protocol": "https",
+					"host": [
+						"appadmin",
+						"brainq",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"reset-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change-password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWFiZmQ4ZDRjNzI5Zjc2YTY2YTc2OWM1M2FjZTk4NzNmMWMxNTNmNDZjOTFjNzc5OWI0Nzk3ZjU0NjVhNTY3YmE5MjdmMTExNTQyMjBkYTkiLCJpYXQiOjE3Mzk1Mzc4NDEuMDU1NjU4LCJuYmYiOjE3Mzk1Mzc4NDEuMDU1NjYxLCJleHAiOjE3NTUxNzYyNDEuMDQ4ODY0LCJzdWIiOiIxOSIsInNjb3BlcyI6W119.Lv-GBUvmMExq61fu9FX23spn0834EEswUcefXZ0N3dxxDEwbbmbCM9IxjuX3c5NoNXdgA8v_o8GWQj7UtemK49VFtttMApP2n9Xq6yreHpmeKMGlnG1vP18Lt0l-ruJsUyrnLqHCGXChw3OrQnrAUqelVM0Ct42LkmQ9Hy7xrRMLhmlcJb1voWACkbh27TPEfg8w9YaZrOQ1z8LxG1XHQkvbexlyhuofjdb3-STpSICKHC-OC5I-nNpdIN_7yo5kNTSd9wfd6-R8JV5Ct9K5dc583dziRloGO3Ew05-_QZ5ufISLBdsjHJ53hyeCmnxzuxsIu1_WVVDi1w8VDe22nhhFUqyzgcCUpoDTo8c-F-BPSjwHr8ar6o4bnYGssT4j9dDWJjHiqiNWQaVGTsQDGCNICHnWBiHO2K1L03HYlP2stOopNEpjXrIIKKWPuplQBwurWDl3o5mruj-NXO2at8hQ3gx4f4VvBgsU5VdH4y5HReNkZwN0BDLF8ub03vjV6w8A7xwsYA9Xwci31wVXJhFcm_tVv-C8GHc_MfPjEYk0k_ZA5xdpAnLyhsV5-EXbJfzR1VZihJBegwcAWVmvYdA8Iw8qNBXfP68yZjqsuifwljsJEZEvo0vl58IrtZNyE8LqNimniUKa3WUDp1TvGzXUxWFbg6ILJDtQb9gl2sM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"current_password\":\"12345678\",\r\n    \"new_password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://appadmin.brainq.co.in/api/change-password",
+					"protocol": "https",
+					"host": [
+						"appadmin",
+						"brainq",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"change-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjM3YWZkNzQ4NGVkNjYwZjVjMTQyOTA1ZDZlNzYwMjBiY2JhZDQ2MTgyNjA5ZmRkNWU5Yzc2ZTZhZmNlNWJkZDhjMzlkODFmNDM0MmI4NzYiLCJpYXQiOjE3Mzk5Njg0OTQuNDE1MjY1LCJuYmYiOjE3Mzk5Njg0OTQuNDE1MjY4LCJleHAiOjE3NTU2MDY4OTQuNDA3MDYyLCJzdWIiOiIxOSIsInNjb3BlcyI6W119.iXdGAA6vt16obHIE8huxriEY8UQ3S-SjuSZ4O4l-fD3rNs11G-qfq2ehe56xXBA-kzjbsKppE9L4qkQCEWpOW-1qz9Z3AEspTr8ajeYaw8Mobuyw4LuYxeN_-WwAqCergqunIMSULzgY-ckqfF1tgu77ZhT0NjfUBgG2A46FOLGTS0N3Xbr7hgQHz08bekTebMxU_vBH7YwfLAS-qSNTDSzGhFhGhRqe7bWqrU1O4itm9Bwtx8Y0b0B41jj2WHH01PLktf1dCJ40X5nMBCas_nLEVNcOf2YU3t1L2GYiTMMWua370OZnlukHTljC63WFOZEWe_fm96x2eUdXwfsfZ0IVLxe2R-FWsl1mJAqxjWWNE2VxlVp8zQHqy84VVLn8kPe8SnnAW6vIq9_26Vs4HTSCHsl9bTTROwRCyOogHMY6zGmy6Cm8Xf3BJwgEi2pmfVUxBmsnxINcG3IXlWow_a6NEEJbburjd5lyaA6nNlzHxuBflbk8eeOBx4NgJRhTPJ_6Svv60PpyEV-AXnpOLcXQ5ZMv7kw8bpdqdbq_JTOWOG7QZjUaeDNo21osC_kirEenbGQwv35MR4tS3FFgwMLuOjjey3Mw_H-upNDGnU-XOg3IEZmaimHbx7POdBjOO5v-CN82msNFDZYTWeUtBmBDvD7VWWvg5zi_j9CTNJA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Abul Pakhir joy nula betin abdul kalam",
+							"type": "text"
+						},
+						{
+							"key": "profile_image",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "email",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "blood_group",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "school_name",
+							"value": "Kolkata School",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "4853",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "141966",
+							"type": "text"
+						},
+						{
+							"key": "pincode",
+							"value": "72210",
+							"type": "text"
+						},
+						{
+							"key": "board",
+							"value": "d2324a19-d1be-4094-a0bc-27760b8f4ee3",
+							"type": "text"
+						},
+						{
+							"key": "class",
+							"value": "ab0594ff-d96a-4e00-8516-1cf80890da2b",
+							"type": "text"
+						},
+						{
+							"key": "medium",
+							"value": "9ffb12fe-a4db-4162-a8f7-6e6727a09b32",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://appadmin.brainq.co.in/api/student/update/profile",
+					"protocol": "https",
+					"host": [
+						"appadmin",
+						"brainq",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"student",
+						"update",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjM3YWZkNzQ4NGVkNjYwZjVjMTQyOTA1ZDZlNzYwMjBiY2JhZDQ2MTgyNjA5ZmRkNWU5Yzc2ZTZhZmNlNWJkZDhjMzlkODFmNDM0MmI4NzYiLCJpYXQiOjE3Mzk5Njg0OTQuNDE1MjY1LCJuYmYiOjE3Mzk5Njg0OTQuNDE1MjY4LCJleHAiOjE3NTU2MDY4OTQuNDA3MDYyLCJzdWIiOiIxOSIsInNjb3BlcyI6W119.iXdGAA6vt16obHIE8huxriEY8UQ3S-SjuSZ4O4l-fD3rNs11G-qfq2ehe56xXBA-kzjbsKppE9L4qkQCEWpOW-1qz9Z3AEspTr8ajeYaw8Mobuyw4LuYxeN_-WwAqCergqunIMSULzgY-ckqfF1tgu77ZhT0NjfUBgG2A46FOLGTS0N3Xbr7hgQHz08bekTebMxU_vBH7YwfLAS-qSNTDSzGhFhGhRqe7bWqrU1O4itm9Bwtx8Y0b0B41jj2WHH01PLktf1dCJ40X5nMBCas_nLEVNcOf2YU3t1L2GYiTMMWua370OZnlukHTljC63WFOZEWe_fm96x2eUdXwfsfZ0IVLxe2R-FWsl1mJAqxjWWNE2VxlVp8zQHqy84VVLn8kPe8SnnAW6vIq9_26Vs4HTSCHsl9bTTROwRCyOogHMY6zGmy6Cm8Xf3BJwgEi2pmfVUxBmsnxINcG3IXlWow_a6NEEJbburjd5lyaA6nNlzHxuBflbk8eeOBx4NgJRhTPJ_6Svv60PpyEV-AXnpOLcXQ5ZMv7kw8bpdqdbq_JTOWOG7QZjUaeDNo21osC_kirEenbGQwv35MR4tS3FFgwMLuOjjey3Mw_H-upNDGnU-XOg3IEZmaimHbx7POdBjOO5v-CN82msNFDZYTWeUtBmBDvD7VWWvg5zi_j9CTNJA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Abul Pakhir joy nula betin abdul kalam",
+							"type": "text"
+						},
+						{
+							"key": "profile_image",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "email",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "blood_group",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "school_name",
+							"value": "Kolkata School",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "4853",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "141966",
+							"type": "text"
+						},
+						{
+							"key": "pincode",
+							"value": "72210",
+							"type": "text"
+						},
+						{
+							"key": "board",
+							"value": "d2324a19-d1be-4094-a0bc-27760b8f4ee3",
+							"type": "text"
+						},
+						{
+							"key": "class",
+							"value": "ab0594ff-d96a-4e00-8516-1cf80890da2b",
+							"type": "text"
+						},
+						{
+							"key": "medium",
+							"value": "9ffb12fe-a4db-4162-a8f7-6e6727a09b32",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://appadmin.brainq.co.in/api/student/getSubjects",
+					"protocol": "https",
+					"host": [
+						"appadmin",
+						"brainq",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"student",
+						"getSubjects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Borad",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTgwNzhjNmNiODdiNTdlNmQ0ZDdjMjE3ZWZlYzIyNTFmMzE4ZTZhMzhlOWNkODcwNDUxZDg0YWUzMzYzYzEwMzBkODMwYmVmMWIyOWNjNmEiLCJpYXQiOjE3NDAxMTg3NzAuMjA3NjcsIm5iZiI6MTc0MDExODc3MC4yMDc2NzIsImV4cCI6MTc1NTc1NzE3MC4xOTczNywic3ViIjoiMTkiLCJzY29wZXMiOltdfQ.fr8Nv-rxJcZGqN5J4P1Dphtp-VQTtVoP-Sx31BBgqoE-kBieWtl0yDH9hBWk7XBj0t8BcojPE1ClkYVPUQEepghqF72J5h51y_88fB3pK0o9rKkSm_UIOm_OVo5DTVQmCpGuK3zZFVs5Be4XIcdxyNExAu0Nhsk5q9oQcXxvMrZQjETvp8gSnf2-R0JgFUBJ9d0wDvzvj8pTVpskZOl5yj_VL51xveCyu5_eNTfS1O2OXVUz3mDXj_4gdfEFDNeWjcT-rz0UopVO_Vmei6nUXrlz8uQSKB-ajdIlvBQLxqvx43ScsSx4LtJMm2BS_v9bZ5YjYHvA3uXRk3dbsUPhuCULyiS7XY5tTpQABkHVw7LVV1yqCaYSHhtMSgCHMx_U6Pow1eL-xV9akr71DcLxAdxMjnm2iBL2_-Xx9YUji4XNVVahKNQZoPWEWNBZ2Q7fVztVB8-DmYayH6sn8kudt0EFbnU2eoWgRAp9TTLv_fzoI5lM0MW8dBeTslSN8TE4cX0FD7tIUC9aXcokZX59M4tI0zvz6JHGyFcl2GtPZ1kai09g_vNJCV4Wo44c8lyFx4tBgBsrPDT2BE81FarqcOk0Y2CRxzXtgiEY9AK6W1HbsFVjR5w4kUd8cAbrI72YqGmr4O7CoLtFjqFNXuDWDzk0k3QctuaqU4m8rGUrfzA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    // \"board\": \"1530054d-a980-4c65-be21-912451fb5c93\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://appadmin.brainq.co.in/api/get-boards",
+					"protocol": "https",
+					"host": [
+						"appadmin",
+						"brainq",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"get-boards"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

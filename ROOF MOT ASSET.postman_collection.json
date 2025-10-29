@@ -1,0 +1,898 @@
+{
+	"info": {
+		"_postman_id": "abe31cae-73c7-4340-a654-2f376a6443b7",
+		"name": "ROOF MOT ASSET",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24986730",
+		"_collection_link": "https://raise-invoice.postman.co/workspace/RAISE-INVOICE-Workspace~28f9b0b3-d767-4ca4-8211-ed2554d5f6af/collection/24986730-abe31cae-73c7-4340-a654-2f376a6443b7?action=share&source=collection_link&creator=24986730"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"niranjanapple1407@gmail.com\",\r\n    // \"email\": \"niranjan1234@gmail.com\",\r\n    \"password\": \"12345678\",\r\n    \"fcm_token\": \"2121212121212121212\",\r\n    \"device_type\": 1 // 1->Andriod,2->IOS\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{liveUrl}}login",
+							"host": [
+								"{{liveUrl}}login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{liveUrl}}user/get/profile",
+							"host": [
+								"{{liveUrl}}user"
+							],
+							"path": [
+								"get",
+								"profile"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Test Inventory User",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "testinventoryuser88@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "22.35363",
+									"type": "text"
+								},
+								{
+									"key": "lng",
+									"value": "88.35251",
+									"type": "text"
+								},
+								{
+									"key": "profile_image",
+									"type": "file",
+									"src": "///SSILAD/folder redirection/tapas.sahoo/Downloads/image (4).png"
+								},
+								{
+									"key": "mobile_number",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}user/update/profile",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								"update",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dashboard",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}user/dashboard",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								"dashboard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Help and Support",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZGNmMzdmNTQzMDk0N2IzOGMwM2NkYzJlYjkzOWE0MTE0NjcyN2FkMWQzYmM5NWE2MWM4ZmUwOWQ5ZjQxMzBlZTJhOTVhM2I2MTAzZTU0NDMiLCJpYXQiOjE3NDcwNTYwNjAuNDkwMjEsIm5iZiI6MTc0NzA1NjA2MC40OTAyMTMsImV4cCI6MTc3ODU5MjA2MC40Nzc5NTUsInN1YiI6IjciLCJzY29wZXMiOltdfQ.iN5xELjqNRbdwFrX8S_hWAHwU1RkWT7ItJ3uxldHJ3EUw0VqkkMEya8RRORHbdwbJcfCPZpNDSgtWmgNhiEiHE7M2Won1Xfytb_85XSo-BXSH6hFjm-OlyH0y-2p7cZn_qmp2BCBi0yEszL4MGuQtjcIP7HRZM0vIAhR2X39xaQjqoFZ_6z3ataaeovWk4iVGr__NWyGlJmvPkezx2EQzoKBZO8ef23d0UrqRyJaJdiMafkWivR9YVAPhWxmoTbqY_Ngk8dzXlCcZLptIZgZwShia5WkUz7u1TAXHR6skjdOt6zseQ7Q-YB5H2aNfgK3n-_cnfe-bItMBFfa4uy55Xvfq_BSCNbXYf5x2F3eVTO5KguyGMkQYwdMEw1jmr0G9s17RXrKMlNf-WM7Q8WgymVWAniO5kjf_00dViRFMuQdBKcGQcfHRJrNZGe3jzfGH7g_mdxEMh1s6AQK99yvyFHvIuPZ_NCKZnaTN2Fr9d1B4A4biOfq9BjsTtIb8ulrErHNDjsi80MupXut0s-4_MOu3he69rICQ-AtS-vae7d3Bwh8I99YRo0BMgHWjfhn4vtmREJXOx5hvhJDK7UTdr0zStlP-tKKT-c4oIQYI-7AyJIO_T18x3S03RS0GyG9YP7iwL1P7ZFNhbcwIPxJzsIOAVgEdCqUTWYtJmo-xOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"test title\",\r\n    \"query_message\": \"test desc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}help/support",
+							"host": [
+								"{{url}}help"
+							],
+							"path": [
+								"support"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Tapas Sahoo\",\r\n    \"mobile_number\": 8989898987,\r\n    \"email\": \"tas290@gmail.com\",\r\n    \"password\": \"Tapas555@\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://theroofmot.com/server/api/v1/signup",
+							"protocol": "https",
+							"host": [
+								"theroofmot",
+								"com"
+							],
+							"path": [
+								"server",
+								"api",
+								"v1",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Master Data",
+			"item": [
+				{
+					"name": "Category List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_id\": \"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}category/list",
+							"host": [
+								"{{url}}category"
+							],
+							"path": [
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Settings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}setting",
+							"host": [
+								"{{url}}setting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Feature",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}feature",
+							"host": [
+								"{{url}}feature"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}cms",
+							"host": [
+								"{{url}}cms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Master Data and CMS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{liveUrl}}get-master-data?activity_status=true",
+							"host": [
+								"{{liveUrl}}get-master-data"
+							],
+							"query": [
+								{
+									"key": "activity_status",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Item",
+			"item": [
+				{
+					"name": "Item List",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"search_term\":\"Drill\"\r\n    // \"category_id\": \"1\"\r\n    \"product_id\":\"21d43095-5adc-4fc6-b176-0ff77c331570\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}product/list",
+							"host": [
+								"{{url}}product"
+							],
+							"path": [
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Activity",
+			"item": [
+				{
+					"name": "Add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "activity_name",
+									"value": "Roof Repair in NY",
+									"type": "text"
+								},
+								{
+									"key": "activity_type",
+									"value": "0 ",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "activity_items[0][product_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "activity_items[0][product_variant_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "activity_items[0][unit_type]",
+									"value": "PCS",
+									"type": "text"
+								},
+								{
+									"key": "activity_items[0][quantity]",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "activity_items[0][product_location]",
+									"value": "Warehouse",
+									"type": "text"
+								},
+								{
+									"key": "activity_items[1][product_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "activity_items[1][product_variant_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "activity_items[1][unit_type]",
+									"value": "PCS",
+									"type": "text"
+								},
+								{
+									"key": "activity_items[1][quantity]",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "activity_items[1][product_location]",
+									"value": "Warehouse",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}add-activity",
+							"host": [
+								"{{url}}add-activity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Activity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"activity_id\": \"2550e11a-39fe-44e8-b4fc-933417fa1e70\"\r\n    // \"status\": 1\r\n    // \"product_id\": [\r\n    //     1,\r\n    //     2\r\n    // ]\r\n    // \"start_date\":\"2025-04-15\",\r\n    // \"start_time\":\"5:42\",\r\n    // \"end_date\":\"2025-05-26\",\r\n    // \"end_time\":\"7:42\",\r\n\r\n    // \"search\":\"rinki\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}list-details-activity",
+							"host": [
+								"{{url}}list-details-activity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMWExZWY0OGEyMzg0M2E4MmU0OGRkYmUwYzE5MGUyYjc1N2VlNzdlMjAxZjEyNzlmOTVjMDE1ZjI2Nzc5OWQwODM1YzYyMzY5ZGQwOTJhNWMiLCJpYXQiOjE3NDQ4MDQzMDkuMjEyMTY4LCJuYmYiOjE3NDQ4MDQzMDkuMjEyMTcyLCJleHAiOjE3NzYzNDAzMDkuMTMxNjU0LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.mAfuB1cwdNSBNVdvtOLmBGlxBUrQI4t_w2OEa5Y_-InuzbiS3JAMFMuz-tUmu5t_hHkzKPJbo8QTB7od6REUfwE2JP3Jx1U6-9G6o9aVMnXRwCrriySJIdQNavgrQxJ_vqGBJqLf8hSRg7Cnhg-_cfETNMPv6CpXvHCUaZzkxKEduPayQj8kHTmz7V58yUDoTXJRAuwcOWeUMpBd-MDuox1masc01eMY_LXryPnoJG1TNPZF8kPmjAXka6EcE8dxkNsJFOMGcOQKYHh7undSj8ghZCEBX-ALJcUdZdeMStSrA4gk9S2chwWJEBZP9YpTn8XdSDZPCn5tNJceKnwiux4Q71dCw8qWCS4ZGaaHst9IWnLesM2Bf11-sANj7Y_dPkQijacBN4AVDfcYq-eygZ6gL3pBPd49ouw6L__gi3R-4_ePz_0fMUc7A5kOXPrtWHvWWTNVz9FoEWZJJH9ySNSkhYC9-WJTwq4ATWM6V8mnWb7nZzeHzc-kpDmJC0Ie7nPN8sL8Bi-Y37UwmX4GVJn3zqPVPS6m_zEkwqCKzGoOAnc-oroaSc3nuPUrDo-rvvkyr9_De3iVwvdQataJM0fX-ly9lTOmGaXda-qoVXeikG_tOJ6DN5rqZgwnx2yJSdMLEZUohMYntLLJ3wtvjEOjuDkv0MFqiZ2E4hClpzY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"activity_id\": 1,\r\n    \"status\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}update-status",
+							"host": [
+								"{{url}}update-status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Report Issue",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "activity_id",
+									"value": "4",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "comments",
+									"value": "xdz bnvnascaScsacbmsa",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "files[0]",
+									"type": "file",
+									"src": "///SSILAD/folder redirection/tapas.sahoo/Downloads/image (4).png",
+									"disabled": true
+								},
+								{
+									"key": "files[1]",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://itunes.apple.com/br/lookup?bundleId=com.theroofmot.tooltrack",
+							"protocol": "https",
+							"host": [
+								"itunes",
+								"apple",
+								"com"
+							],
+							"path": [
+								"br",
+								"lookup"
+							],
+							"query": [
+								{
+									"key": "bundleId",
+									"value": "com.theroofmot.tooltrack"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mark as returned",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZjlkNDczODA3ODVkYWMwNzdkMTliZDgzMDAxMWMzNjZmMGYwNWUwYWU1YmRkYTZhYjEyZTYzNjYyMDgxMzk5YzBlOTQ4MGQzNWNlZTcwNTMiLCJpYXQiOjE3NDY2MDQ4MjcuMjg4MDIxLCJuYmYiOjE3NDY2MDQ4MjcuMjg4MDI0LCJleHAiOjE3NzgxNDA4MjcuMjY0NzE5LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.BLUap8M-URAFyFsgFVxtH9FEs0bRHBHoYfS-nUc2N-Q9a7CPIdJ29hcBAyL4yT25j9X4KRraNgDhTytHkYrU0695318esz6SAvXmqqoKk86OW7e0RcqY5dYWRMxDekdN0gtEz_e3fnQDsuVYpRp74qmiBafE_mCXw_etaZ3kJLYIB0UCT9Xuw2s-OtR9UBnqSEeA00RDILn8iSwB4E7xbi0V1clA7hl5kTsiYkPQYQcz3sUl_x1NJoLSVoizyDWFAIhiON8bbHqCMzxJTkLea2ROgZy_2nxYpFFZc_akBq0VNIPcXM4yPP7-DMqIGH_daYpUaox0XXVwewd3d3_slXUG4qUoBVPwmfrsjCj4RGOY2Xg2IU_ynSHb506GJ2n9H5kz7cKZi5WDycyL6AN84uirJAShpBwKHeDWv-DVyVYuKDdio6NQ-X3ZEUucE500Q53PpxSiiPq55G1zBIz90xHgTgVR3u5yNQOxFLB_GfHQxYJ36w58-b7QZrh9_0kRKVRjjvrdZW6nS4-tOYERwp0wl0dpsbX1Dz4M8P_zS5EvXRAwkkGLVAxt3mcnhC7uFXEtCqUb5GGAnr2CyDrEL3Ycts2vnoaNvsoX5RjK0pIpSYB6LLHr4FGlBRfZr_J5CeIifz0z-HLW7MfuVVXR-wa9t0Q5McBWIDKVibAQjIY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "activity_id",
+									"value": "23",
+									"type": "text"
+								},
+								{
+									"key": "activity_items[0][product_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "activity_items[0][product_variant_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "activity_items[0][unit_type]",
+									"value": "kg",
+									"type": "text"
+								},
+								{
+									"key": "activity_items[0][quantity]",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "activity_items[0][quantity_consumed]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "activity_items[0][comments]",
+									"value": "First item comment",
+									"type": "text"
+								},
+								{
+									"key": "activity_items[0][product_location]",
+									"value": "Warehouse A",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/mark-as-returned",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"mark-as-returned"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI3IiwianRpIjoiZGMzMGY3ZTllMTdlYmRjNDVkODhiNDkzZGU1ZGU1OGQwMGZhMTAwMGViY2RmZjJjMmY0MTM5ZDM0OTU4NTc1YzhkOWEyYmIyYTZlYTIwMTUiLCJpYXQiOjE3NDgzMzA2OTcuMjQxMTYzLCJuYmYiOjE3NDgzMzA2OTcuMjQxMTY1LCJleHAiOjE3Nzk4NjY2OTcuMjM2Njg4LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.nAbbng_OPh0GPrlcjSf-hBfFOXMvapCzwGKBVW8SoOQv3y4uL7xkLn6gu-USikTbpNjxeVntYtCH-QXV6qqhHNrQZeTeDD-L9uzEbj6HxPfQ4n6acHePd_lo4HETNvr1pYLTILOOhk3oeR8_z-ARvbDfegQG867h7D9TGTOezm_5nioNvRMo6fip3wxLr7j4IwviQqad7VDihN1sm16vckuwdwrlX9gnD9Ud_sBYdwX8eJzyNwe7Z03T5hFFICV7_Pgv3JXPv-eG-ADUl9a3tG0eT1nemRQRzHtBQSl7V0xcVEpejYKIaWWiXNinrxHHF5dGh5al9BAOUKniV_hl_WU0VgkTi6T7uToAHq8NxzNFN9DROXW14ghSyP3IC6rSTi7db5ySBJVxhqwoazmYzXRMefVZ891VHhQ-Dq0y6HycKvB9j47cQNg5cuZp87kXiExeC6aWGGHKjsl9NYmxGWfncrRjKxGgLaRMPFwDGyP83imJQ0txZ0wOnL1v4BZjQ71Z9f5wIB_fn2ZH1k99qhrkJg2-F5p5kXvUVTiPwnWA8FR478kW5on2zDSSngFPB23mW5CBfQRVKwu3P1W84VoQLRxb-VRAJ_R1RPyZj3_Oge5JUW8IUVOTY0WSPY9el9wmtFrh-LD271_tVYohD8a4UxaTZRbp1GnZti9vHYs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"email\": \"testinventoryuser@gmail.com\",\r\n    \"email\": \"niranjan123@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}notification-list",
+							"host": [
+								"{{url}}notification-list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI3IiwianRpIjoiMWM2NTUwNTJmMzJmZGEzZWVkZDRhYTQyYTJhOTA2OWE4OGQ3ZWQyYzk5NGY2ZGZhOTgxODM2OWEyZmQ0OWIzZjNlY2U4MGIxMmFhNGMyNzEiLCJpYXQiOjE3NTA5MzMzNTcuODE2Mjg4LCJuYmYiOjE3NTA5MzMzNTcuODE2MjkxLCJleHAiOjE3ODI0NjkzNTcuODE0NjczLCJzdWIiOiIyNyIsInNjb3BlcyI6W119.THlnNKOM6_cD8GSIW5YjIIhIinnC0HmevBArYUWEIQMrw7_VrSDbL5UIry31pI5FXbD1ALVd25YVzUkZbQ0BwI-c4I4Qqd4yI7DkI9BFDa19o5ax3qxqID7MupbuYK2ge7XqgFDGaZOevcTXqLtiATgcu-cJUNpuZR6M3RrNrDweRTtSZxW2GDFppRt8ukf56eH42KMA1oWCTHzufzMSwF_qhF9glGY5EYbsCUWzHeMZLT3x1F5McD2aB0L6HImAGVwxLXKEigB9dA9HB-Vl73nrINqckOyH69A2u0cKIncturErhFEJ35ozLWGm5ikfhTtlajbo-sYCKg6mf8KQ7FSM2S3CRgd1XuuHlhg1IkiMLUmGXU_w3yp9gBH5ligro_BGan9Wp5J_KtfoeZw2wTkFZ2gK_bX-PDy8Zq75_p5TFXhIuLUhPlJZfpCTQLk4GZ_nu_u0XTMxPjMAgC7TA0-salmw6eDyrvhMNfTBItfSfb-FGY9cv-V9zvHtFkx20G03rRKdXTcLP4rrYnZ1xOgay3fMT4fkdXEvHlcAGOOSJnMg5Cysrm5oX-6ugZxvPiqaHgHbGVTfFoZ7_bSv5BSbdKoGeygaIeNWEzR0wqqKzUH5LksW0qTZ3eCQFQeDBlUbqc_87JUT6z-PvW5IHg1q00mofIDnHOhPj0DXhdY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_type\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{liveUrl}}user/list",
+							"host": [
+								"{{liveUrl}}user"
+							],
+							"path": [
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Asset",
+			"item": [
+				{
+					"name": "Mng Attribute",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXVpZCI6IjkxOGViNjdmLTk0MTYtNDVkYS1iMjY4LWFkMWViMDU3Y2E2NSIsIm5hbWUiOiJUYXBhc2ggU2Fob28iLCJlbWFpbCI6InRhcGFzQGdtYWlsLmNvbSIsImRldmljZVR5cGUiOjEsImlzVmVyaWZpZWQiOnRydWUsImlhdCI6MTc0MTg1MDU5MywiZXhwIjoxNzQ0NDQyNTkzfQ.HqzSBHUpYlDHN9Rf9Y5buaCo_hXmMeVMosY8U7eDE-Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/mng-attributes?category_id=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"mng-attributes"
+							],
+							"query": [
+								{
+									"key": "category_id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Attribute",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1IiwianRpIjoiYjY0NGZmNGFiYjk5ZTA3MGRiZTUwMzBkNTAxM2E0MzliOGMwNmIyNzg3ODA3ZGJmNTY2OTBlM2ZjZTZhNjgxMTYxNTk2ZGIwZTc4OTY0ZGYiLCJpYXQiOjE3NTU1MjA2NDMuMzkxMzczLCJuYmYiOjE3NTU1MjA2NDMuMzkxMzc3LCJleHAiOjE3NzE0MTgyNDMuMzgzMzYxLCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.TruaOPE9X5I65VPsG7plX_KyQ03m_RhpZheZidZhyXf_ba6y6e9QOUNQAsIlGaQcST2S029C9rR9iXpnR_OPxL1vzn6CoGipRgU9u7Bo4CaSbUu60HNTgByLP7q6TAow-okPhaNdCvUxbtlVF9G673c10BjxlBbSU4yO44Oe-trKwBZo8GKziBYHtdyWFdgr_9E4iLyC-D1dFI3uhc0DTNE8Gwn5EJlm_ye-Z2KmGk3f4fIBXrGJQ6qagojJrDO8YaO_dewjpMw0danThoQ3knDuhULrXfu631M_ZnCjbmujjNohemK7OBP4sSK_-2JBqLa8vKo4z38mzQwQu-7uvioZxKo1egg8T1k-H11rU_FaXyITXCgwrKs44Wvkq5IIHlot3oS7AxvhT1X_TUGHeZ7NGn9bnOiK2S1HX2B-8U-X0_5SYXKR6ZfSYBJSCx0souGUy2sWAbWama6oXbeCj02pTyXvMFAL2ngMCVtikfKmlV08uga8YhPev1aCGwfeNBhv1spsb-3fVWsh0IK0duGbybhGn-uOnxzna8o2udc113V9cJGffGQhmWI5dk5g67nn4oJpJKm01U5R9ZpOb7VItLHKclJwrbffyzDtpyrzmORWjqZejd1k57A0iN3bEI1fmLdkqkwkm_qy5LxyjHttyt6XdqTafbJvgKZtVtg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"item_ids\": [\r\n        1,\r\n        2\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/delete-attributes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"delete-attributes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8000/api/v1/",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTNmMGY3YTllMDhiZjIzZmMyMGJjNzNjOGQ4ODZkNjEyNTcxYTFmNDNmOWQ3NmQxOWFhMmM4ZTlkOTE2MDE2YWM1ZjMwMDQyMDZhN2FlYjQiLCJpYXQiOjE3NDQyODgxNzYuOTU1NjI2LCJuYmYiOjE3NDQyODgxNzYuOTU1NjMxLCJleHAiOjE3NzU4MjQxNzYuNzkwMDI4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.Ne5AhfXvx_jpymnbrqj-ix4tuv3lMCE-Cju20rFv1sG99pM5yfXYvEzGt5nOcOUAoBFqJZOOwqjgK1gaCJ3juk_bpi1eHAzEufvVX5_ZIDI-wxNnGyEApUU9u79pQYNBadCHKb2hmNJU1MlsPBL5pNqp_Cd1Q3aRVi_x7KMPKAmpVd_TnvS2STykm67aS1_BB6ckTxxn_vMVCd58ZSyOIkAItxol73fxkm9hVJ6Sdp-CYJtVFJiaNxOfmkncwxVlC4zPf-lhGFJt-Qn7dkpe0tKQroQTGOiyLUjcFAW_Rjm2445t5B4PEOLtwEFFK42yORlzZvueHKw5MTAcBSYalrm20oL_lLAZDatWFhd6p6fAS27yZvKdNKDPCKdQEICJNdSA0nN576TvcpmeT0S4TmduFhulUmbvcaEAYV4i0FX0alQ81h5GHRwe3K0xKxVcq1SNITGL6yvPIdkS-vSttYmCqiJuDFfAQF8gm0DcBlIQVUDPd0AyTJF7L_C6f_14jSnIUjwThOcH-tl4QxnwL_Tn_H9sZYZYVnUY9N8z4lM6Xf9LJf4uBWaSkE5nqiYpmUPoi3Jd_Kr6a9c3eqksrrmuiElP_tNiwPcjIwjXPNHZr4qxl94YhF0tcfbuqehVt7n8y6ksLujaECgqolFXWs-B4CTCgVfvCTRNeHc7LR0",
+			"type": "string"
+		},
+		{
+			"key": "liveUrl",
+			"value": "https://theroofmot.com/server/api/v1/",
+			"type": "string"
+		}
+	]
+}
