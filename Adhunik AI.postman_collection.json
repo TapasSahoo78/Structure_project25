@@ -1,0 +1,2199 @@
+{
+	"info": {
+		"_postman_id": "21201e3a-a2a4-4416-b71f-d9f11941f16b",
+		"name": "Adhunik AI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24986730",
+		"_collection_link": "https://raise-invoice.postman.co/workspace/RAISE-INVOICE-Workspace~28f9b0b3-d767-4ca4-8211-ed2554d5f6af/collection/24986730-21201e3a-a2a4-4416-b71f-d9f11941f16b?action=share&source=collection_link&creator=24986730"
+	},
+	"item": [
+		{
+			"name": "Auh",
+			"item": [
+				{
+					"name": "Role",
+					"item": [
+						{
+							"name": "Add Role",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Super Admin\",\r\n    // \"name\": \"Customer\",\r\n    \"permissions\": [\r\n        \"CREATE_USER\",\r\n        \"READ_USER\",\r\n        \"UPDATE_USER\",\r\n        \"DELETE_USER\",\r\n        \"VIEW_REPORTS\",\r\n        \"MANAGE_SETTINGS\",\r\n        \"ACCESS_ADMIN_PANEL\",\r\n        \"VIEW_DASHBOARD\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}roles",
+									"host": [
+										"{{base_url}}roles"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Admin\",\r\n    \"permissions\": [\r\n        \"CREATE_USER\",\r\n        \"READ_USER\",\r\n        \"UPDATE_USER\",\r\n        \"DELETE_USER\",\r\n        \"VIEW_REPORTS\",\r\n        \"MANAGE_SETTINGS\",\r\n        \"ACCESS_ADMIN_PANEL\",\r\n        \"VIEW_DASHBOARD\"\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}roles",
+											"host": [
+												"{{base_url}}roles"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization, token"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "368"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"170-E02KW974uf2oYXsTr+xL/4zP7Zg\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 30 Apr 2025 11:28:26 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"name\": \"Admin\",\n    \"permissions\": [\n        \"CREATE_USER\",\n        \"READ_USER\",\n        \"UPDATE_USER\",\n        \"DELETE_USER\",\n        \"VIEW_REPORTS\",\n        \"MANAGE_SETTINGS\",\n        \"ACCESS_ADMIN_PANEL\",\n        \"VIEW_DASHBOARD\"\n    ],\n    \"created_by\": null,\n    \"_id\": \"6812095a63921dff0b1de3ea\",\n    \"created_date\": \"2025-04-30T11:28:26.871Z\",\n    \"createdAt\": \"2025-04-30T11:28:26.872Z\",\n    \"updatedAt\": \"2025-04-30T11:28:26.872Z\",\n    \"__v\": 0,\n    \"id\": \"6812095a63921dff0b1de3ea\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Edit Role",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Super Admin\",\r\n    \"permissions\": [\r\n        \"CREATE_USER\",\r\n        \"READ_USER\",\r\n        \"UPDATE_USER\",\r\n        \"DELETE_USER\",\r\n        \"VIEW_REPORTS\",\r\n        \"MANAGE_SETTINGS\",\r\n        \"ACCESS_ADMIN_PANEL\",\r\n        \"VIEW_DASHBOARD\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}roles/6901ca439dbcd2e9b45f0edb",
+									"host": [
+										"{{base_url}}roles"
+									],
+									"path": [
+										"6901ca439dbcd2e9b45f0edb"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Edit Role",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Admin\",\r\n    \"permissions\": [\r\n        \"CREATE_USER\",\r\n        \"READ_USER\",\r\n        \"UPDATE_USER\",\r\n        \"DELETE_USER\",\r\n        \"VIEW_REPORTS\",\r\n        \"MANAGE_SETTINGS\",\r\n        \"ACCESS_ADMIN_PANEL\",\r\n        \"VIEW_DASHBOARD\"\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}roles/6812095a63921dff0b1de3ea",
+											"host": [
+												"{{base_url}}roles"
+											],
+											"path": [
+												"6812095a63921dff0b1de3ea"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization, token"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "368"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"170-k7c8XtqrCYTYdciZvi5y6aelMYI\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 30 Apr 2025 11:29:09 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"_id\": \"6812095a63921dff0b1de3ea\",\n    \"name\": \"Admin\",\n    \"permissions\": [\n        \"CREATE_USER\",\n        \"READ_USER\",\n        \"UPDATE_USER\",\n        \"DELETE_USER\",\n        \"VIEW_REPORTS\",\n        \"MANAGE_SETTINGS\",\n        \"ACCESS_ADMIN_PANEL\",\n        \"VIEW_DASHBOARD\"\n    ],\n    \"created_by\": null,\n    \"created_date\": \"2025-04-30T11:28:26.871Z\",\n    \"createdAt\": \"2025-04-30T11:28:26.872Z\",\n    \"updatedAt\": \"2025-04-30T11:29:09.766Z\",\n    \"__v\": 0,\n    \"id\": \"6812095a63921dff0b1de3ea\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Role",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}roles/6901ca439dbcd2e9b45f0edb",
+									"host": [
+										"{{base_url}}roles"
+									],
+									"path": [
+										"6901ca439dbcd2e9b45f0edb"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete Role",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}roles/6812094063921dff0b1de3e4",
+											"host": [
+												"{{base_url}}roles"
+											],
+											"path": [
+												"6812094063921dff0b1de3e4"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization, token"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "39"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"27-ubQu1fSPBtIEgZjlh4N3G6Aqn1w\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 30 Apr 2025 11:28:11 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Role deleted successfully\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Roles",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}roles",
+									"host": [
+										"{{base_url}}roles"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Add Role Copy",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}roles",
+											"host": [
+												"{{base_url}}roles"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization, token"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "746"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"2ea-B7/yCqHTEBTD+i9/SMfkReaZh30\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 30 Apr 2025 11:28:59 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"_id\": \"6812095563921dff0b1de3e8\",\n        \"name\": \"Super Admin\",\n        \"permissions\": [\n            \"CREATE_USER\",\n            \"READ_USER\",\n            \"UPDATE_USER\",\n            \"DELETE_USER\",\n            \"VIEW_REPORTS\",\n            \"MANAGE_SETTINGS\",\n            \"ACCESS_ADMIN_PANEL\",\n            \"VIEW_DASHBOARD\"\n        ],\n        \"created_by\": null,\n        \"created_date\": \"2025-04-30T11:28:21.161Z\",\n        \"createdAt\": \"2025-04-30T11:28:21.162Z\",\n        \"updatedAt\": \"2025-04-30T11:28:21.162Z\",\n        \"__v\": 0,\n        \"id\": \"6812095563921dff0b1de3e8\"\n    },\n    {\n        \"_id\": \"6812095a63921dff0b1de3ea\",\n        \"name\": \"Admin2\",\n        \"permissions\": [\n            \"CREATE_USER\",\n            \"READ_USER\",\n            \"UPDATE_USER\",\n            \"DELETE_USER\",\n            \"VIEW_REPORTS\",\n            \"MANAGE_SETTINGS\",\n            \"ACCESS_ADMIN_PANEL\",\n            \"VIEW_DASHBOARD\"\n        ],\n        \"created_by\": null,\n        \"created_date\": \"2025-04-30T11:28:26.871Z\",\n        \"createdAt\": \"2025-04-30T11:28:26.872Z\",\n        \"updatedAt\": \"2025-04-30T11:28:55.617Z\",\n        \"__v\": 0,\n        \"id\": \"6812095a63921dff0b1de3ea\"\n    }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Registration",
+					"item": [
+						{
+							"name": "registration super-admin",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"roleId\": \"6900adac35dce423fd84b8ba\",\r\n    \"first_name\": \"Michael\",\r\n    \"middle_name\": \"\",\r\n    \"last_name\": \"Skeers\",\r\n    \"user_name\": \"superAdmin\",\r\n    \"password\": \"12345678\",\r\n    \"email\": \"super.admin1@test.com\",\r\n    \"gender\": \"male\",\r\n    \"address_line_1\": \"kolkata\",\r\n    \"address_line_2\": \"kolkata\",\r\n    \"city\": \"kolkata\",\r\n    \"state\": \"WB\",\r\n    \"country\": \"I\",\r\n    \"ZIP\": \"700001\",\r\n    \"contact_label\": \"HOME\",\r\n    \"phone_number\": \"9022910791\",\r\n    \"phone_extension\": \"91\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}register",
+									"host": [
+										"{{base_url}}register"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "registration super-admin",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"roleId\": \"6812095563921dff0b1de3e8\",\r\n    \"first_name\": \"Michael\",\r\n    \"middle_name\": \"\",\r\n    \"last_name\": \"Skeers\",\r\n    \"user_name\": \"superAdmin\",\r\n    \"password\": \"12345678\",\r\n    \"email\": \"super.admin1@test.com\",\r\n    \"gender\": \"MALE\",\r\n    \"address_line_1\": \"kolkata\",\r\n    \"address_line_2\": \"kolkata\",\r\n    \"city\": \"kolkata\",\r\n    \"state\": \"WB\",\r\n    \"country\": \"I\",\r\n    \"ZIP\": \"700001\",\r\n    \"contact_label\": \"HOME\",\r\n    \"phone_number\": \"9022910791\",\r\n    \"phone_extension\": \"91\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}register",
+											"host": [
+												"{{base_url}}register"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization, token"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "781"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"30d-dy3TFn+Hyt5/8ovhV2L6HG4bukc\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 30 Apr 2025 11:34:38 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Authentication Successful!\",\n    \"result\": {\n        \"first_name\": \"Michael\",\n        \"middle_name\": \"\",\n        \"last_name\": \"Skeers\",\n        \"user_name\": \"superAdmin\",\n        \"email\": \"super.admin1@test.com\",\n        \"phone_number\": 9022910791,\n        \"password\": \"$2a$10$dWJagLwJgcm26GAHRUHaz.ldWGvK6tBlvX3veFGYiNQa1qjt0CpSm\",\n        \"is_disabled\": false,\n        \"roleId\": \"6812095563921dff0b1de3e8\",\n        \"gender\": \"MALE\",\n        \"address_line_1\": \"kolkata\",\n        \"address_line_2\": \"kolkata\",\n        \"city\": \"kolkata\",\n        \"state\": \"WB\",\n        \"country\": \"I\",\n        \"ZIP\": \"700001\",\n        \"contact_label\": \"HOME\",\n        \"phone_extension\": 91,\n        \"last_login_date\": null,\n        \"created_by\": null,\n        \"devices_token\": null,\n        \"otp\": null,\n        \"expiresAt\": null,\n        \"_id\": \"68120ace63921dff0b1de403\",\n        \"created_date\": \"2025-04-30T11:34:38.086Z\",\n        \"createdAt\": \"2025-04-30T11:34:38.087Z\",\n        \"updatedAt\": \"2025-04-30T11:34:38.087Z\",\n        \"__v\": 0,\n        \"id\": \"68120ace63921dff0b1de403\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "registration admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"roleId\": \"6812095a63921dff0b1de3ea\",\r\n    \"first_name\": \"soumadip\",\r\n    \"middle_name\": \"\",\r\n    \"last_name\": \"hazra\",\r\n    \"user_name\": \"soumitaHazra3\",\r\n    \"password\": \"12345678\",\r\n    \"email\": \"soumita.test3.admin@test.com\",\r\n    \"gender\": \"MALE\",\r\n    \"address_line_1\": \"kolkata\",\r\n    \"address_line_2\": \"kolkata\",\r\n    \"city\": \"kolkata\",\r\n    \"state\": \"WB\",\r\n    \"country\": \"I\",\r\n    \"ZIP\": \"700014\",\r\n    \"contact_label\": \"HOME\",\r\n    \"phone_number\": \"9123800093\",\r\n    \"phone_extension\": \"91\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}register",
+									"host": [
+										"{{base_url}}register"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "registration admin",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"roleId\": \"6812095a63921dff0b1de3ea\",\r\n    \"first_name\": \"soumadip\",\r\n    \"middle_name\": \"\",\r\n    \"last_name\": \"hazra\",\r\n    \"user_name\": \"soumitaHazra3\",\r\n    \"password\": \"12345678\",\r\n    \"email\": \"soumita.test3.admin@test.com\",\r\n    \"gender\": \"MALE\",\r\n    \"address_line_1\": \"kolkata\",\r\n    \"address_line_2\": \"kolkata\",\r\n    \"city\": \"kolkata\",\r\n    \"state\": \"WB\",\r\n    \"country\": \"I\",\r\n    \"ZIP\": \"700014\",\r\n    \"contact_label\": \"HOME\",\r\n    \"phone_number\": \"9123800093\",\r\n    \"phone_extension\": \"91\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}register",
+											"host": [
+												"{{base_url}}register"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization, token"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "791"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"317-UPtTJwhQVr5YfZbtICdZRFMG4W0\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 30 Apr 2025 11:36:01 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Authentication Successful!\",\n    \"result\": {\n        \"first_name\": \"soumadip\",\n        \"middle_name\": \"\",\n        \"last_name\": \"hazra\",\n        \"user_name\": \"soumitaHazra3\",\n        \"email\": \"soumita.test3.admin@test.com\",\n        \"phone_number\": 9123800093,\n        \"password\": \"$2a$10$kiL9a9YJ5bOOOguZYY.o2.LjGpQVfFEt/qaQOoWqqa18Tdg/bEAOq\",\n        \"is_disabled\": false,\n        \"roleId\": \"6812095a63921dff0b1de3ea\",\n        \"gender\": \"MALE\",\n        \"address_line_1\": \"kolkata\",\n        \"address_line_2\": \"kolkata\",\n        \"city\": \"kolkata\",\n        \"state\": \"WB\",\n        \"country\": \"I\",\n        \"ZIP\": \"700014\",\n        \"contact_label\": \"HOME\",\n        \"phone_extension\": 91,\n        \"last_login_date\": null,\n        \"created_by\": null,\n        \"devices_token\": null,\n        \"otp\": null,\n        \"expiresAt\": null,\n        \"_id\": \"68120b2163921dff0b1de409\",\n        \"created_date\": \"2025-04-30T11:36:01.472Z\",\n        \"createdAt\": \"2025-04-30T11:36:01.473Z\",\n        \"updatedAt\": \"2025-04-30T11:36:01.473Z\",\n        \"__v\": 0,\n        \"id\": \"68120b2163921dff0b1de409\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "registration Customer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"roleId\": \"681c95f8b4ecfadb8ef97c50\",\r\n    \"first_name\": \"Tapas\",\r\n    \"middle_name\": \"\",\r\n    \"last_name\": \"Sahoo\",\r\n    \"user_name\": \"TapasSahoo\",\r\n    \"password\": \"12345678\",\r\n    \"email\": \"tapas.member@shyamfuture.com\",\r\n    \"gender\": \"male\",\r\n    \"address_line_1\": \"kolkata\",\r\n    \"address_line_2\": \"kolkata\",\r\n    \"city\": \"kolkata\",\r\n    \"state\": \"WB\",\r\n    \"country\": \"I\",\r\n    \"ZIP\": \"700001\",\r\n    \"contact_label\": \"HOME\",\r\n    \"phone_number\": \"7407992001\",\r\n    \"phone_extension\": \"91\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}register",
+									"host": [
+										"{{base_url}}register"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "registration member",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"roleId\": \"68120b4063921dff0b1de40b\",\r\n    \"first_name\": \"Soumita\",\r\n    \"middle_name\": \"\",\r\n    \"last_name\": \"Hazra\",\r\n    \"user_name\": \"soumadipHArza\",\r\n    \"password\": \"12345678\",\r\n    \"email\": \"soumadip.member@shyamfuture.com\",\r\n    \"gender\": \"MALE\",\r\n    \"address_line_1\": \"kolkata\",\r\n    \"address_line_2\": \"kolkata\",\r\n    \"city\": \"kolkata\",\r\n    \"state\": \"WB\",\r\n    \"country\": \"I\",\r\n    \"ZIP\": \"700001\",\r\n    \"contact_label\": \"HOME\",\r\n    \"phone_number\": \"7407992001\",\r\n    \"phone_extension\": \"91\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}register",
+											"host": [
+												"{{base_url}}register"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization, token"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "793"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"319-02PthK+gRy9cy6bQWANFYPfj+j8\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 30 Apr 2025 11:37:51 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Authentication Successful!\",\n    \"result\": {\n        \"first_name\": \"Soumita\",\n        \"middle_name\": \"\",\n        \"last_name\": \"Hazra\",\n        \"user_name\": \"soumadipHArza\",\n        \"email\": \"soumadip.member@shyamfuture.com\",\n        \"phone_number\": 7407992001,\n        \"password\": \"$2a$10$KebBo75UHIREGa/.rjYZmePTN3R8fslJLGTUHeg9dyTRId2HVpqpm\",\n        \"is_disabled\": false,\n        \"roleId\": \"68120b4063921dff0b1de40b\",\n        \"gender\": \"MALE\",\n        \"address_line_1\": \"kolkata\",\n        \"address_line_2\": \"kolkata\",\n        \"city\": \"kolkata\",\n        \"state\": \"WB\",\n        \"country\": \"I\",\n        \"ZIP\": \"700001\",\n        \"contact_label\": \"HOME\",\n        \"phone_extension\": 91,\n        \"last_login_date\": null,\n        \"created_by\": null,\n        \"devices_token\": null,\n        \"otp\": null,\n        \"expiresAt\": null,\n        \"_id\": \"68120b8f63921dff0b1de412\",\n        \"created_date\": \"2025-04-30T11:37:51.562Z\",\n        \"createdAt\": \"2025-04-30T11:37:51.562Z\",\n        \"updatedAt\": \"2025-04-30T11:37:51.562Z\",\n        \"__v\": 0,\n        \"id\": \"68120b8f63921dff0b1de412\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"item": [
+						{
+							"name": "login super admin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"super.admin1@test.com\",\r\n    \"roleName\":\"Manager\",\r\n    \"password\": \"12345678\",\r\n    \"devices_token\": \"2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}login",
+									"host": [
+										"{{base_url}}login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "login super admin",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"roleId\": \"6812095563921dff0b1de3e8\",\r\n    \"user_id\": \"super.admin@test.com\",\r\n    \"password\": \"12345678\",\r\n    \"devices_token\": \"2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}login",
+											"host": [
+												"{{base_url}}login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization, token"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1373"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"55d-n4Xp7XW4HIfkuxopXWy9XhR3LNo\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 30 Apr 2025 11:48:53 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Authentication Successful!\",\n    \"result\": {\n        \"loginInstance\": {\n            \"_id\": \"68120a8d63921dff0b1de3f4\",\n            \"first_name\": \"Michael\",\n            \"middle_name\": \"\",\n            \"last_name\": \"Skeers\",\n            \"user_name\": \"adminmember\",\n            \"email\": \"super.admin@test.com\",\n            \"phone_number\": 9022910799,\n            \"password\": \"$2a$10$P7qeq4/1dctANgIVEsGSxOGgUkbOUX6bjbQxNdRRIAfnZpxAL6B0a\",\n            \"is_disabled\": false,\n            \"roleId\": \"6812095563921dff0b1de3e8\",\n            \"gender\": \"MALE\",\n            \"address_line_1\": \"kolkata\",\n            \"address_line_2\": \"kolkata\",\n            \"city\": \"kolkata\",\n            \"state\": \"WB\",\n            \"country\": \"I\",\n            \"ZIP\": \"700001\",\n            \"contact_label\": \"HOME\",\n            \"phone_extension\": 91,\n            \"last_login_date\": \"2025-04-30T11:48:29.440Z\",\n            \"created_by\": null,\n            \"devices_token\": \"2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG\",\n            \"otp\": null,\n            \"expiresAt\": null,\n            \"created_date\": \"2025-04-30T11:33:33.120Z\",\n            \"createdAt\": \"2025-04-30T11:33:33.121Z\",\n            \"updatedAt\": \"2025-04-30T11:48:29.446Z\",\n            \"__v\": 0,\n            \"id\": \"68120a8d63921dff0b1de3f4\"\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1cGVyLmFkbWluQHRlc3QuY29tIiwicm9sZUlkIjoiNjgxMjA5NTU2MzkyMWRmZjBiMWRlM2U4IiwiZmlyc3RfbmFtZSI6Ik1pY2hhZWwiLCJsYXN0X25hbWUiOiJTa2VlcnMiLCJ1c2VyX25hbWUiOiJhZG1pbm1lbWJlciIsImlhdCI6MTc0NjAxMzczMywiZXhwIjoxNzc3NTcxMzMzfQ.s90EElssFDMNNUMHAq3TFlZYM9IJbNi_I1Wv80Znemo\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "login admin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"soumita.test3.admin@test.com\",\r\n    \"password\": \"12345678\",\r\n    \"devices_token\": \"2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}login",
+									"host": [
+										"{{base_url}}login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "login admin",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"roleId\": \"6812095a63921dff0b1de3ea\",\r\n    \"user_id\": \"soumita.test3.admin@test.com\",\r\n    \"password\": \"12345678\",\r\n    \"devices_token\": \"2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}login",
+											"host": [
+												"{{base_url}}login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization, token"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1144"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"478-XHdW6lgs9amL+KbjcTabFM2+D28\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 30 Apr 2025 11:49:36 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Authentication Successful!\",\n    \"result\": {\n        \"loginInstance\": {\n            \"_id\": \"68120b2163921dff0b1de409\",\n            \"first_name\": \"soumadip\",\n            \"middle_name\": \"\",\n            \"last_name\": \"hazra\",\n            \"user_name\": \"soumitaHazra3\",\n            \"email\": \"soumita.test3.admin@test.com\",\n            \"phone_number\": 9123800093,\n            \"password\": \"$2a$10$kiL9a9YJ5bOOOguZYY.o2.LjGpQVfFEt/qaQOoWqqa18Tdg/bEAOq\",\n            \"is_disabled\": false,\n            \"roleId\": \"6812095a63921dff0b1de3ea\",\n            \"gender\": \"MALE\",\n            \"address_line_1\": \"kolkata\",\n            \"address_line_2\": \"kolkata\",\n            \"city\": \"kolkata\",\n            \"state\": \"WB\",\n            \"country\": \"I\",\n            \"ZIP\": \"700014\",\n            \"contact_label\": \"HOME\",\n            \"phone_extension\": 91,\n            \"last_login_date\": null,\n            \"created_by\": null,\n            \"devices_token\": null,\n            \"otp\": null,\n            \"expiresAt\": null,\n            \"created_date\": \"2025-04-30T11:36:01.472Z\",\n            \"createdAt\": \"2025-04-30T11:36:01.473Z\",\n            \"updatedAt\": \"2025-04-30T11:36:01.473Z\",\n            \"__v\": 0,\n            \"id\": \"68120b2163921dff0b1de409\"\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNvdW1pdGEudGVzdDMuYWRtaW5AdGVzdC5jb20iLCJyb2xlSWQiOiI2ODEyMDk1YTYzOTIxZGZmMGIxZGUzZWEiLCJmaXJzdF9uYW1lIjoic291bWFkaXAiLCJsYXN0X25hbWUiOiJoYXpyYSIsInVzZXJfbmFtZSI6InNvdW1pdGFIYXpyYTMiLCJpYXQiOjE3NDYwMTM3NzYsImV4cCI6MTc3NzU3MTM3Nn0.jqwfBpQlua7dzE2nb1MGaoOBM2eI8N3gFx3lLY44oyY\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "login customer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"tapas.member@shyamfuture.com\",\r\n    \"password\": \"12345678\",\r\n    \"devices_token\": \"2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}customer-login",
+									"host": [
+										"{{base_url}}customer-login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "login customer",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"roleId\": \"68120b4063921dff0b1de40b\",\r\n    \"user_id\": \"soumadip.member@shyamfuture.com\",\r\n    \"password\": \"12345678\",\r\n    \"devices_token\": \"2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}login",
+											"host": [
+												"{{base_url}}login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization, token"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1211"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"4bb-F11OQdKfOiWG0QkhLY6KDnOugGU\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 30 Apr 2025 13:22:17 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Authentication Successful!\",\n    \"result\": {\n        \"userResponse\": {\n            \"first_name\": \"Soumita\",\n            \"middle_name\": \"\",\n            \"last_name\": \"Hazra\",\n            \"user_name\": \"soumadipHArza\",\n            \"password\": \"$2a$10$KebBo75UHIREGa/.rjYZmePTN3R8fslJLGTUHeg9dyTRId2HVpqpm\",\n            \"email\": \"soumadip.member@shyamfuture.com\",\n            \"gender\": \"MALE\",\n            \"address_line_1\": \"kolkata\",\n            \"address_line_2\": \"kolkata\",\n            \"city\": \"kolkata\",\n            \"state\": \"WB\",\n            \"country\": \"I\",\n            \"ZIP\": \"700001\",\n            \"contact_label\": \"HOME\",\n            \"phone_number\": 7407992001,\n            \"phone_extension\": 91,\n            \"is_disabled\": false,\n            \"devices_token\": \"2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG\",\n            \"otp\": null,\n            \"expiresAt\": null,\n            \"last_login_date\": \"2025-04-30T13:21:57.800Z\",\n            \"roleId\": \"68120b4063921dff0b1de40b\",\n            \"roleName\": \"Customer\"\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNvdW1hZGlwLm1lbWJlckBzaHlhbWZ1dHVyZS5jb20iLCJyb2xlSWQiOiI2ODEyMGI0MDYzOTIxZGZmMGIxZGU0MGIiLCJmaXJzdF9uYW1lIjoiU291bWl0YSIsImxhc3RfbmFtZSI6IkhhenJhIiwidXNlcl9uYW1lIjoic291bWFkaXBIQXJ6YSIsImlhdCI6MTc0NjAxOTMzNywiZXhwIjoxNzc3NTc2OTM3fQ.s5YhxdnnMNymCWw8w6AVSUTIdDMuarmb9z4GUJJpHRc\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "email verification with password change",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roleId\": \"68120b4063921dff0b1de40b\", //only send at the time of registration\r\n    // \"type\": \"email\", // email,otp\r\n    // \"type\": \"otp\", // email,otp\r\n    \"type\": \"password\",\r\n    // \"type\": \"veryemail\", //When Role Admin is selected\r\n    \"email\": \"super.admin1@test.com\"\r\n    // ,\"otp\": \"5048\"  //when enable \"type\": \"otp\",\r\n    ,\"password\": \"123456\",\r\n    \"confirmPassword\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}email-verification-with-password-change",
+							"host": [
+								"{{base_url}}email-verification-with-password-change"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "email verification with password change",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"roleId\": \"68120b4063921dff0b1de40b\", //only send at the time of registration\r\n    \"type\": \"email\", // email,otp\r\n    // \"type\": \"otp\", // email,otp\r\n    // \"type\": \"password\",\r\n    // \"type\": \"veryemail\", //When Role Admin is selected\r\n    \"email\": \"soumadip.member@shyamfuture.com\"\r\n    // ,\"otp\": \"2820\"  //when enable \"type\": \"otp\",\r\n    // ,\"password\": \"Abc@1234\",\r\n    // \"confirmPassword\": \"Abc@1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}email-verification-with-password-change",
+									"host": [
+										"{{base_url}}email-verification-with-password-change"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization, token"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "141"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8d-sQCHELgTyrv7K8r4HiFU7FsWPSw\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 13:25:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"OTP sent successfully!\",\n    \"result\": {\n        \"email\": \"soumadip.member@shyamfuture.com\",\n        \"otp\": \"5048\",\n        \"expiresAt\": \"2025-04-30T13:30:38.561Z\"\n    }\n}"
+						},
+						{
+							"name": "email verification with password change",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"roleId\": \"68120b4063921dff0b1de40b\", //only send at the time of registration\r\n    // \"type\": \"email\", // email,otp\r\n    // \"type\": \"otp\", // email,otp\r\n    \"type\": \"password\",\r\n    // \"type\": \"veryemail\", //When Role Admin is selected\r\n    \"email\": \"soumadip.member@shyamfuture.com\"\r\n    // ,\"otp\": \"5048\"  //when enable \"type\": \"otp\",\r\n    ,\"password\": \"123456\",\r\n    \"confirmPassword\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}email-verification-with-password-change",
+									"host": [
+										"{{base_url}}email-verification-with-password-change"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization, token"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1049"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"419-LqMK6FCvy0JMBjGqZOSo8SepvWg\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 13:26:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Password changed successfully!\",\n    \"member\": {\n        \"_id\": \"68120b8f63921dff0b1de412\",\n        \"first_name\": \"Soumita\",\n        \"middle_name\": \"\",\n        \"last_name\": \"Hazra\",\n        \"user_name\": \"soumadipHArza\",\n        \"email\": \"soumadip.member@shyamfuture.com\",\n        \"phone_number\": 7407992001,\n        \"password\": \"$2a$10$KebBo75UHIREGa/.rjYZmePTN3R8fslJLGTUHeg9dyTRId2HVpqpm\",\n        \"is_disabled\": false,\n        \"roleId\": \"68120b4063921dff0b1de40b\",\n        \"gender\": \"MALE\",\n        \"address_line_1\": \"kolkata\",\n        \"address_line_2\": \"kolkata\",\n        \"city\": \"kolkata\",\n        \"state\": \"WB\",\n        \"country\": \"I\",\n        \"ZIP\": \"700001\",\n        \"contact_label\": \"HOME\",\n        \"phone_extension\": 91,\n        \"last_login_date\": \"2025-04-30T13:22:17.660Z\",\n        \"created_by\": null,\n        \"devices_token\": \"2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG\",\n        \"otp\": null,\n        \"expiresAt\": null,\n        \"created_date\": \"2025-04-30T11:37:51.562Z\",\n        \"createdAt\": \"2025-04-30T11:37:51.562Z\",\n        \"updatedAt\": \"2025-04-30T13:26:08.583Z\",\n        \"__v\": 0,\n        \"id\": \"68120b8f63921dff0b1de412\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "password change after login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lbWJlcjF3QHRlc3QuY29tIiwicm9sZSI6Ik1FTUJFUiIsImZpcnN0X25hbWUiOiJzb3VtYWRpcCIsImxhc3RfbmFtZSI6ImhhenJhIiwidXNlcl9uYW1lIjoibXNvdW1hZGlwSGF6cmExdyIsImlhdCI6MTczOTc5NjYxNywiZXhwIjoxNzcxMzU0MjE3fQ.Uw7grqJAR-fOzc7BtGmSXCAwXmeFEsz7X-5j_Iz36qU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"super.admin1@test.com\",\r\n    \"old_password\": \"12345678\",\r\n    \"new_password\": \"12345678\",\r\n    \"confirm_password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}password-change",
+							"host": [
+								"{{base_url}}password-change"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Profile Details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}get-profile",
+							"host": [
+								"{{base_url}}get-profile"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Profile Details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}get-profile",
+									"host": [
+										"{{base_url}}get-profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization, token"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "872"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"368-Lu2e7h/LIBrN/JmUjw4J75rhY0w\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 13:39:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Data fetched successfully\",\n    \"result\": {\n        \"userResponse\": {\n            \"first_name\": \"Soumita\",\n            \"middle_name\": \"\",\n            \"last_name\": \"Hazra\",\n            \"user_name\": \"soumadipHArza\",\n            \"password\": \"$2a$10$H9VAdffXoV9Frnr6GUc7POBLyTr3gHCE44WAD/hqxqs0E8U3IFvmS\",\n            \"email\": \"soumadip.member@shyamfuture.com\",\n            \"gender\": \"MALE\",\n            \"address_line_1\": \"kolkata\",\n            \"address_line_2\": \"kolkata\",\n            \"city\": \"kolkata\",\n            \"state\": \"WB\",\n            \"country\": \"I\",\n            \"ZIP\": \"700001\",\n            \"contact_label\": \"HOME\",\n            \"phone_number\": 7407992001,\n            \"phone_extension\": 91,\n            \"is_disabled\": false,\n            \"devices_token\": \"2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG2a$10$L6o4BqSgORxhUKVcRHNhr.D04qbaS3Tz9uqiRUxl1rrufIzePwZG\",\n            \"otp\": null,\n            \"expiresAt\": null,\n            \"last_login_date\": \"2025-04-30T13:32:21.055Z\",\n            \"roleId\": \"68120b4063921dff0b1de40b\",\n            \"roleName\": \"Customer\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Profile Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "soumadip",
+									"type": "text"
+								},
+								{
+									"key": "middle_name",
+									"value": "Kumar",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "hazra",
+									"type": "text"
+								},
+								{
+									"key": "user_name",
+									"value": "msoumadipHazra1w3",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "address_line_1",
+									"value": "Sodepur",
+									"type": "text"
+								},
+								{
+									"key": "address_line_2",
+									"value": "kolkata",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "kolkata",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "WB",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "India",
+									"type": "text"
+								},
+								{
+									"key": "ZIP",
+									"value": "700112",
+									"type": "text"
+								},
+								{
+									"key": "contact_label",
+									"value": "HOME",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "3245678901",
+									"type": "text"
+								},
+								{
+									"key": "phone_extension",
+									"value": "91",
+									"type": "text"
+								},
+								{
+									"key": "company",
+									"value": "abcdddd",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "super.admin@test.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}update-profile",
+							"host": [
+								"{{base_url}}update-profile"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "role",
+											"value": "ADMIN",
+											"type": "text"
+										},
+										{
+											"key": "first_name",
+											"value": "soumadip",
+											"type": "text"
+										},
+										{
+											"key": "middle_name",
+											"value": "Kumar",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "hazra",
+											"type": "text"
+										},
+										{
+											"key": "user_name",
+											"value": "soumitaadmin1234",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "MALE",
+											"type": "text"
+										},
+										{
+											"key": "address_line_1",
+											"value": "Sodepur",
+											"type": "text"
+										},
+										{
+											"key": "address_line_2",
+											"value": "kolkata",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "kolkata",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "WB",
+											"type": "text"
+										},
+										{
+											"key": "country",
+											"value": "India",
+											"type": "text"
+										},
+										{
+											"key": "ZIP",
+											"value": "700112",
+											"type": "text"
+										},
+										{
+											"key": "contact_label",
+											"value": "HOME",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "3245678901",
+											"type": "text"
+										},
+										{
+											"key": "phone_extension",
+											"value": "91",
+											"type": "text"
+										},
+										{
+											"key": "company",
+											"value": "abcdddd",
+											"type": "text"
+										},
+										{
+											"key": "date_of_birth",
+											"value": "2025-01-01",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}auth/update-profile",
+									"host": [
+										"{{base_url}}auth"
+									],
+									"path": [
+										"update-profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization, token"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b-7X8/x3xTdJV5WC9ZYf2d8hSE1f4\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 26 Mar 2025 06:46:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Profile updated successfully!\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Add User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roleId\": \"68ca63ff0f6fd5d0775de550\",\r\n    \"first_name\": \"Tapas\",\r\n    \"middle_name\": \"\",\r\n    \"last_name\": \"Sahoo\",\r\n    \"user_name\": \"tapasSahoo\",\r\n    \"password\": \"12345678\",\r\n    \"email\": \"tapas.sahoo@shyamfuture.com\",\r\n    \"gender\": \"MALE\",\r\n    \"address_line_1\": \"kolkata\",\r\n    \"address_line_2\": \"kolkata\",\r\n    \"city\": \"kolkata\",\r\n    \"state\": \"WB\",\r\n    \"country\": \"I\",\r\n    \"ZIP\": \"700001\",\r\n    \"contact_label\": \"HOME\",\r\n    \"phone_number\": \"9547614783\",\r\n    \"phone_extension\": \"91\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}users",
+							"host": [
+								"{{base_url}}users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roleId\": \"68120b4063921dff0b1de40b\",\r\n    \"first_name\": \"Soumita\",\r\n    \"middle_name\": \"\",\r\n    \"last_name\": \"Hazra\",\r\n    \"user_name\": \"soumadipHArza\",\r\n    \"password\": \"12345678\",\r\n    \"email\": \"soumadip.member@shyamfuture.com\",\r\n    \"gender\": \"MALE\",\r\n    \"address_line_1\": \"kolkata\",\r\n    \"address_line_2\": \"kolkata\",\r\n    \"city\": \"kolkata\",\r\n    \"state\": \"WB\",\r\n    \"country\": \"I\",\r\n    \"ZIP\": \"700001\",\r\n    \"contact_label\": \"HOME\",\r\n    \"phone_number\": \"7407992001\",\r\n    \"phone_extension\": \"91\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}users/681898a9f89e900d8fdcc696",
+							"host": [
+								"{{base_url}}users"
+							],
+							"path": [
+								"681898a9f89e900d8fdcc696"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}users/681898a9f89e900d8fdcc696",
+							"host": [
+								"{{base_url}}users"
+							],
+							"path": [
+								"681898a9f89e900d8fdcc696"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}users",
+							"host": [
+								"{{base_url}}users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}users",
+							"host": [
+								"{{base_url}}users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category Management",
+			"item": [
+				{
+					"name": "Add Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Video\",\r\n    \"description\": \"Test Description\",\r\n    \"icon\": \"https://picsum.photos/seed/picsum/200/300\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}categories",
+							"host": [
+								"{{base_url}}categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roleId\": \"68120b4063921dff0b1de40b\",\r\n    \"first_name\": \"Soumita\",\r\n    \"middle_name\": \"\",\r\n    \"last_name\": \"Hazra\",\r\n    \"user_name\": \"soumadipHArza\",\r\n    \"password\": \"12345678\",\r\n    \"email\": \"soumadip.member@shyamfuture.com\",\r\n    \"gender\": \"MALE\",\r\n    \"address_line_1\": \"kolkata\",\r\n    \"address_line_2\": \"kolkata\",\r\n    \"city\": \"kolkata\",\r\n    \"state\": \"WB\",\r\n    \"country\": \"I\",\r\n    \"ZIP\": \"700001\",\r\n    \"contact_label\": \"HOME\",\r\n    \"phone_number\": \"7407992001\",\r\n    \"phone_extension\": \"91\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}categories/68189a9af89e900d8fdcc6a7",
+							"host": [
+								"{{base_url}}categories"
+							],
+							"path": [
+								"68189a9af89e900d8fdcc6a7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Category Details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}categories/68189a9af89e900d8fdcc6a7",
+							"host": [
+								"{{base_url}}categories"
+							],
+							"path": [
+								"68189a9af89e900d8fdcc6a7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Category List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}categories",
+							"host": [
+								"{{base_url}}categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}categories/68189a9af89e900d8fdcc6a7",
+							"host": [
+								"{{base_url}}categories"
+							],
+							"path": [
+								"68189a9af89e900d8fdcc6a7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Faq Mng",
+			"item": [
+				{
+					"name": "Add Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"category one\",\r\n    \"description\": \"asbchjashbsahbaschashc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}faq-categories",
+							"host": [
+								"{{base_url}}faq-categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}faq-categories",
+							"host": [
+								"{{base_url}}faq-categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Faq Category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"category two\",\r\n    \"description\": \"asbchjashbsahbaschashc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}faq-categories/681da333d0f873aef0e991fa",
+							"host": [
+								"{{base_url}}faq-categories"
+							],
+							"path": [
+								"681da333d0f873aef0e991fa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Faq Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}faq-categories/681da333d0f873aef0e991fa",
+							"host": [
+								"{{base_url}}faq-categories"
+							],
+							"path": [
+								"681da333d0f873aef0e991fa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Faqs List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}faqs",
+							"host": [
+								"{{base_url}}faqs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Faq",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"faqCategoryId\": \"681da333d0f873aef0e991fa\",\r\n    \"question\": \"faq dsghcvgsacnvascnv avsnvhsacvac\",\r\n    \"answer\": \"asxvaxvasxvhnbcabnc\",\r\n    \"is_active\": true,\r\n    \"is_user\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}faqs",
+							"host": [
+								"{{base_url}}faqs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}faqs/681db65d4f5b6660de734593",
+							"host": [
+								"{{base_url}}faqs"
+							],
+							"path": [
+								"681db65d4f5b6660de734593"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Faq Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\":\"sacgcgasx bsvdvhjsdcsd bhjsdbhcjhbcasjb\",\r\n    \"answer\":\"qytqwsqwsnb hjsdchschvc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}faqs/681db65d4f5b6660de734593",
+							"host": [
+								"{{base_url}}faqs"
+							],
+							"path": [
+								"681db65d4f5b6660de734593"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Page",
+			"item": [
+				{
+					"name": "Add Page",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Contact Us222\",\r\n    \"blocks\": [\r\n        {\r\n            \"title\": \"sahvxcvcsvgc\",\r\n            \"subtitle\": \"sabxavnscxnv\",\r\n            \"content\": \"xnvsacsavn\",\r\n            \"order_number\": 1,\r\n            \"status\": true\r\n        }\r\n    ],\r\n    \"meta_title\": \"contasct us page\",\r\n    \"meta_description\": \"contact us description\",\r\n    \"meta_keywords\": \"contact,description\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}pages",
+							"host": [
+								"{{base_url}}pages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Page",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZGNmMzdmNTQzMDk0N2IzOGMwM2NkYzJlYjkzOWE0MTE0NjcyN2FkMWQzYmM5NWE2MWM4ZmUwOWQ5ZjQxMzBlZTJhOTVhM2I2MTAzZTU0NDMiLCJpYXQiOjE3NDcwNTYwNjAuNDkwMjEsIm5iZiI6MTc0NzA1NjA2MC40OTAyMTMsImV4cCI6MTc3ODU5MjA2MC40Nzc5NTUsInN1YiI6IjciLCJzY29wZXMiOltdfQ.iN5xELjqNRbdwFrX8S_hWAHwU1RkWT7ItJ3uxldHJ3EUw0VqkkMEya8RRORHbdwbJcfCPZpNDSgtWmgNhiEiHE7M2Won1Xfytb_85XSo-BXSH6hFjm-OlyH0y-2p7cZn_qmp2BCBi0yEszL4MGuQtjcIP7HRZM0vIAhR2X39xaQjqoFZ_6z3ataaeovWk4iVGr__NWyGlJmvPkezx2EQzoKBZO8ef23d0UrqRyJaJdiMafkWivR9YVAPhWxmoTbqY_Ngk8dzXlCcZLptIZgZwShia5WkUz7u1TAXHR6skjdOt6zseQ7Q-YB5H2aNfgK3n-_cnfe-bItMBFfa4uy55Xvfq_BSCNbXYf5x2F3eVTO5KguyGMkQYwdMEw1jmr0G9s17RXrKMlNf-WM7Q8WgymVWAniO5kjf_00dViRFMuQdBKcGQcfHRJrNZGe3jzfGH7g_mdxEMh1s6AQK99yvyFHvIuPZ_NCKZnaTN2Fr9d1B4A4biOfq9BjsTtIb8ulrErHNDjsi80MupXut0s-4_MOu3he69rICQ-AtS-vae7d3Bwh8I99YRo0BMgHWjfhn4vtmREJXOx5hvhJDK7UTdr0zStlP-tKKT-c4oIQYI-7AyJIO_T18x3S03RS0GyG9YP7iwL1P7ZFNhbcwIPxJzsIOAVgEdCqUTWYtJmo-xOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"activity_id\": \"87c165d8-6fe4-4e03-97d6-a4f1c45a42f1\"\r\n    // \"status\": 2\r\n    // \"product_id\": [\r\n    //     1,\r\n    //     2\r\n    // ]\r\n    \"start_date\":\"2025-04-15\",\r\n    \"start_time\":\"5:42\",\r\n    \"end_date\":\"2025-05-26\",\r\n    \"end_time\":\"7:42\"\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}pages",
+							"host": [
+								"{{base_url}}pages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deatils",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Contact Us\",\r\n    \"blocks\": [\r\n        {\r\n            \"title\": \"sahvxcvcsvgc\",\r\n            \"subtitle\": \"sabxavnscxnv\",\r\n            \"content\": \"xnvsacsavn\",\r\n            \"order_number\": 1,\r\n            \"status\": 1\r\n        }\r\n    ],\r\n    \"meta_title\": \"contasct us page\",\r\n    \"meta_description\": \"contact us description\",\r\n    \"meta_keywords\": \"contact,description\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}pages/683450b17182063470a38065/",
+							"host": [
+								"{{base_url}}pages"
+							],
+							"path": [
+								"683450b17182063470a38065",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"blocks\": [\r\n        \"vshacghaschgashgashj\",\r\n        \"gxhcgxghxasghxashgx\",\r\n        \"vhsaasxhjasxsaxjasxhj\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}pages/6821ecc82ad2fb7a6654b7d8",
+							"host": [
+								"{{base_url}}pages"
+							],
+							"path": [
+								"6821ecc82ad2fb7a6654b7d8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Block",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"title\": \"Contact Us222 3e73e73 276727627 367e37e37\",\r\n    \"blocks\": [\r\n        {\r\n            \"title\": \"32e32423424234423\",\r\n            \"subtitle\": \"222222222222222222\",\r\n            \"content\": \"333333333333333\",\r\n            \"order_number\": 1,\r\n            \"status\": true\r\n        }\r\n    ]\r\n    // \"meta_title\": \"contasct us page 22112121\",\r\n    // \"meta_description\": \"contact us description w2w1w1w1w\",\r\n    // \"meta_keywords\": \"contact,description 23212\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}pages/683450b17182063470a38065/",
+							"host": [
+								"{{base_url}}pages"
+							],
+							"path": [
+								"683450b17182063470a38065",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}pages/683450b17182063470a38065/68347f735c1107a30488f8ac",
+							"host": [
+								"{{base_url}}pages"
+							],
+							"path": [
+								"683450b17182063470a38065",
+								"68347f735c1107a30488f8ac"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Menu",
+			"item": [
+				{
+					"name": "Add Menu",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZGNmMzdmNTQzMDk0N2IzOGMwM2NkYzJlYjkzOWE0MTE0NjcyN2FkMWQzYmM5NWE2MWM4ZmUwOWQ5ZjQxMzBlZTJhOTVhM2I2MTAzZTU0NDMiLCJpYXQiOjE3NDcwNTYwNjAuNDkwMjEsIm5iZiI6MTc0NzA1NjA2MC40OTAyMTMsImV4cCI6MTc3ODU5MjA2MC40Nzc5NTUsInN1YiI6IjciLCJzY29wZXMiOltdfQ.iN5xELjqNRbdwFrX8S_hWAHwU1RkWT7ItJ3uxldHJ3EUw0VqkkMEya8RRORHbdwbJcfCPZpNDSgtWmgNhiEiHE7M2Won1Xfytb_85XSo-BXSH6hFjm-OlyH0y-2p7cZn_qmp2BCBi0yEszL4MGuQtjcIP7HRZM0vIAhR2X39xaQjqoFZ_6z3ataaeovWk4iVGr__NWyGlJmvPkezx2EQzoKBZO8ef23d0UrqRyJaJdiMafkWivR9YVAPhWxmoTbqY_Ngk8dzXlCcZLptIZgZwShia5WkUz7u1TAXHR6skjdOt6zseQ7Q-YB5H2aNfgK3n-_cnfe-bItMBFfa4uy55Xvfq_BSCNbXYf5x2F3eVTO5KguyGMkQYwdMEw1jmr0G9s17RXrKMlNf-WM7Q8WgymVWAniO5kjf_00dViRFMuQdBKcGQcfHRJrNZGe3jzfGH7g_mdxEMh1s6AQK99yvyFHvIuPZ_NCKZnaTN2Fr9d1B4A4biOfq9BjsTtIb8ulrErHNDjsi80MupXut0s-4_MOu3he69rICQ-AtS-vae7d3Bwh8I99YRo0BMgHWjfhn4vtmREJXOx5hvhJDK7UTdr0zStlP-tKKT-c4oIQYI-7AyJIO_T18x3S03RS0GyG9YP7iwL1P7ZFNhbcwIPxJzsIOAVgEdCqUTWYtJmo-xOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Contact Us\",\r\n    \"menu_order\": \"1\",\r\n    \"link_type\": \"1\",\r\n    \"pageId\": \"682207230b7403cb2a281cd3\",\r\n    \"menu_group\": \"saxbsabvxsabvx\",\r\n    \"menu_link\": \"http://localhost:3131/api/v1/\",\r\n    \"is_active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}menus",
+							"host": [
+								"{{base_url}}menus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Menu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}menus",
+							"host": [
+								"{{base_url}}menus"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3131/api/v1/",
+			"type": "string"
+		},
+		{
+			"key": "live_url",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNvdW1hZGlwLm1lbWJlckBzaHlhbWZ1dHVyZS5jb20iLCJyb2xlSWQiOiI2ODEyMGI0MDYzOTIxZGZmMGIxZGU0MGIiLCJmaXJzdF9uYW1lIjoiU291bWl0YSIsImxhc3RfbmFtZSI6IkhhenJhIiwidXNlcl9uYW1lIjoic291bWFkaXBIQXJ6YSIsImlhdCI6MTc0NjAxOTk0MSwiZXhwIjoxNzc3NTc3NTQxfQ.YPm09Rk88jF4jbnuds0Sa1VWiH41FL8OaRi5PXXHKQg",
+			"type": "string"
+		}
+	]
+}
